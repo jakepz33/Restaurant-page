@@ -4,11 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="styleheet" type="text/css" href="../src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Gabarito:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Gabarito:wght@400;500;600;700;800&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <style>
-      nav {
-        height: 80px;
-        background-color: red;
+      html {
+        font-size: 16px;
+      }
+      body {
+        background-color: rgb(201, 243, 243);
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      #content {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        /* background-color: blueviolet; */
+        background-image: url("poke.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      nav:not(#content) {
+        height: 10%;
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
       }
       ul {
         height: 100%;
@@ -16,27 +58,71 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #dddddd;
+        background-color: transparent;
         display: flex;
         align-items: center;
         justify-content: center;
       }
+
       li {
         display: inline-block;
         padding: 15px;
+        color: white;
+      }
+      button {
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      #background {
+        width: 100%;
+        height: calc(100% - 10%);
+        /* background-image: url("poke.jpg");
+        background-repeat: no-repeat;
+        background-size: cover; */
+        display: flex;
+      }
+      .flexbox {
+        flex: 1;
+      }
+      #whitebox {
+        background-color: aliceblue;
+        min-height: 600px;
+        width: 50%;
+        position: relative;
+        left: 5%;
+        top: 10%;
+        display: flex;
+        flex-direction: column;
+        font-family: "Roboto Condensed", sans-serif;
+        border-radius: 15px;
+      }
+      #whitebox > div {
+        flex: 1;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      #name {
+        font-family: "Agbalumo", sans-serif;
+        min-height: 60%;
+        position: relative;
+        width: 45%;
+        left: 35%;
+        top: 0;
+        font-size: 8rem;
+        background-color: transparent;
+        color: white;
+        font-weight: 800;
+      }
+      p {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div id="content">
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
-    </div>
+    <div id="content"></div>
     <script src="main.js"></script>
   </body>
 </html>
