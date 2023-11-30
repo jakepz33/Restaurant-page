@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #content {
+        /* position: relative; */
+        height: 100vh;
+        width: 100vw;
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .item1 {
+        grid-area: menuIntro;
+        padding: 0;
+        margin: 0;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1/3;
+      }
+      .item9 {
+        grid-column: 1/3;
+      }
+      #grid-container {
+        width: 90%;
+        height: 90%;
+        background-color: bisque;
+        display: grid;
+        grid-template-areas: "menuIntro menuIntro";
+        grid-template-columns: auto auto;
+      }
+      #grid-container > div {
+        /* background-color: brown; */
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+      .item7 {
+        background-color: aqua;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">
+      <div id="grid-container">
+        <div class="item1">
+          <h1 style="font-size: 80px; font-weight: 700; margin-bottom: 10px">
+            wild ocean
+          </h1>
+          <p style="display: block">our daily seafood menu</p>
+        </div>
+        <div class="item3">
+          <h3>Tuna Sushi Bowl - 2.90</h3>
+          <p>known as poke bowl</p>
+        </div>
+        <div class="item4">
+          <h3>Tuna Sushi Bowl - 2.90</h3>
+          <p>known as poke bowl</p>
+        </div>
+        <div class="item5">
+          <h3>Tuna Sushi Bowl - 2.90</h3>
+          <p>known as poke bowl</p>
+        </div>
+        <div class="item6">
+          <h3>Tuna Sushi Bowl - 2.90</h3>
+          <p>known as poke bowl</p>
+        </div>
+        <div class="item7">
+          <h3>Tuna Sushi Bowl - 2.90</h3>
+          <p>known as poke bowl</p>
+        </div>
+        <div class="item8">
+          <h3>Tuna Sushi Bowl - 2.90</h3>
+          <p>known as poke bowl</p>
+        </div>
+        <div class="item9">img</div>
+      </div>
+    </div>
+  </body>
+</html>

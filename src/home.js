@@ -1,7 +1,12 @@
 import "./home.css";
 
 function parentContainer() {
-  const backgroundDiv = document.querySelector("#background");
+  const backgroundDiv = document.querySelector(".background");
+  const contentDiv = document.querySelector(".content");
+
+  contentDiv.id = "content";
+  backgroundDiv.id = "background";
+  backgroundDiv.textContent = "";
 }
 
 function leftFlexbox() {
@@ -70,6 +75,7 @@ function rightFlexbox() {
 }
 
 function loadHomepage() {
+  parentContainer();
   const backgroundDiv = document.querySelector("#background");
   backgroundDiv.appendChild(leftFlexbox());
   backgroundDiv.appendChild(rightFlexbox());

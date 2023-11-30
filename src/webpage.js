@@ -1,5 +1,5 @@
 import loadHomepage from "./home";
-import clear from "./menu";
+import loadMenu from "./menu";
 
 function navBar() {
   const navLinks = ["Home", "Menu", "Contact"];
@@ -15,7 +15,7 @@ function navBar() {
     },
     Menu: function () {
       console.log("Menu button is selected");
-      clear();
+      loadMenu();
     },
     Contact: function () {
       console.log("Contact button is selected");
@@ -44,14 +44,23 @@ function navBar() {
 function backgroundDiv() {
   const backgroundDiv = document.createElement("div");
   backgroundDiv.id = "background";
+  backgroundDiv.classList.add("background");
 
   return backgroundDiv;
+}
+function footer() {
+  const footerDiv = document.createElement("div");
+  footerDiv.classList.add("footer");
+  footerDiv.textContent = "Footer";
+
+  return footerDiv;
 }
 
 function loadWebpage() {
   const contentContainer = document.querySelector("#content");
   contentContainer.appendChild(navBar());
   contentContainer.appendChild(backgroundDiv());
+  contentContainer.appendChild(footer());
   loadHomepage();
   //append home webpage
 }

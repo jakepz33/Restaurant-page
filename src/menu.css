@@ -1,0 +1,31 @@
+.item1 {
+  grid-area: menuIntro;
+  padding: 0;
+  margin: 0;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/3;
+}
+.item9 {
+  grid-column: 1/3;
+}
+#grid-container {
+  width: 90%;
+  height: 90%;
+  background-color: bisque;
+  display: grid;
+  grid-template-areas: "menuIntro menuIntro";
+  grid-template-columns: auto auto;
+}
+#grid-container > div {
+  /* background-color: brown; */
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.item7 {
+  background-color: aqua;
+}
