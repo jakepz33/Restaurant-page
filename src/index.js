@@ -1,6 +1,7 @@
 import initializePage from "./print.js";
+import loadWebpage from "./webpage.js";
 
-initializePage();
+loadWebpage();
 // function component() {
 //   const element = document.createElement("div");
 //   const btn = document.createElement("button");
