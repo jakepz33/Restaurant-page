@@ -1,5 +1,6 @@
 import loadHomepage from "./home";
 import loadMenu from "./menu";
+import gitHubIcon from "./github-mark-white.png";
 
 function navBar() {
   const navLinks = ["Home", "Menu", "Contact"];
@@ -48,12 +49,30 @@ function backgroundDiv() {
 
   return backgroundDiv;
 }
-function footer() {
-  const footerDiv = document.createElement("div");
-  footerDiv.classList.add("footer");
-  footerDiv.textContent = "Footer";
 
-  return footerDiv;
+function footer() {
+  const footer = document.createElement("div");
+  const footerContainer = document.createElement("div");
+  const madeBy = document.createElement("p");
+  const inlineText = document.createElement("span");
+  const imgDiv = document.createElement("img");
+  imgDiv.src = gitHubIcon;
+  imgDiv.style.width = "25px";
+  imgDiv.style.height = "25px";
+
+  const anchorLink = document.createElement("a");
+  anchorLink.href = "https://github.com/jakepz33";
+  anchorLink.target = "_blank";
+  anchorLink.appendChild(imgDiv);
+
+  footer.classList.add("footer");
+  footerContainer.classList.add("footerContainer");
+  inlineText.textContent = "developed by Jacob Perez";
+  madeBy.append(inlineText, anchorLink);
+  footerContainer.append(madeBy);
+  footer.appendChild(footerContainer);
+
+  return footer;
 }
 
 function loadWebpage() {
