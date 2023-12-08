@@ -5,12 +5,12 @@
 //   console.log("running clear");
 // }
 import "./home.css";
-import anchorImg from "./noun-anchor.svg";
-import fishImg from "./big-fish.png";
-import smallFishImg from "./small-fish.png";
+import anchorImg from "./media/noun-anchor.svg";
+import fishImg from "./media/big-fish.png";
+import smallFishImg from "./media/small-fish.png";
 
 function makeBGgrid() {
-  const background = document.querySelector("#background");
+  const background = document.querySelector(".background");
   const contentContainer = document.querySelector("#content");
 
   contentContainer.id = "menuContent";

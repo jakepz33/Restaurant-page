@@ -1,6 +1,7 @@
 import loadHomepage from "./home";
 import loadMenu from "./menu";
-import gitHubIcon from "./github-mark-white.png";
+import gitHubIcon from "./media/github-mark-white.png";
+import loadContact from "./contact";
 
 function navBar() {
   const navLinks = ["Home", "Menu", "Contact"];
@@ -20,6 +21,7 @@ function navBar() {
     },
     Contact: function () {
       console.log("Contact button is selected");
+      loadContact();
     },
   };
 
